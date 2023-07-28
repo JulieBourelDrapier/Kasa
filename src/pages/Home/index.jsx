@@ -1,9 +1,8 @@
 function Home() {
   return (
-
-    <div>
-      <h1>Accueil</h1>
-    </div> 
+      <div>
+          <link to="/banner"></link>
+      </div> 
   )
 }
 
