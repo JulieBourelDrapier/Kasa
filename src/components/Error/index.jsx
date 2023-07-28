@@ -1,7 +1,9 @@
 function Error() {
   return (
       <div>
-          <h1>Oups 🙈 Cette page n'existe pas</h1>
+        <h1>404</h1>
+          <p>Oups! La page que vous demandez n'existe pas.</p>
+            <p> Retournez sur la page d'accueil</p>
       </div>
   )
 }

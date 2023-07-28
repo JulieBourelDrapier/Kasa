@@ -1,12 +1,15 @@
-import { Link } from 'react-router-dom'
- 
+import { Link } from 'react-router-dom';
+
 function Header() {
     return (
         <nav>
-            <Link to="/">Accueil</Link>
-            <Link to="/survey">Questionnaire</Link>
+            <img src="Kasa/assets/logokasa.png" alt="Logo du site Kasa" />
+            <ul>
+                <li><Link to="/">Accueil</Link></li>
+                <li><Link to="/about">À propos</Link></li>
+            </ul>
         </nav>
-    )
+    );
 }
 
-export default Header
+export default Header;
