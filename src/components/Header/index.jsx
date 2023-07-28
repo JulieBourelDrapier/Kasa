@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 function Header() {
     return (
         <nav>
-            <img src="Kasa/assets/logokasa.png" alt="Logo du site Kasa" />
+            <img src="assets/logokasa.png" alt="Logo du site Kasa" />
             <ul>
                 <li><Link to="/">Accueil</Link></li>
                 <li><Link to="/about">À propos</Link></li>
