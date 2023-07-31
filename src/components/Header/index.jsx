@@ -5,40 +5,39 @@ import styled from 'styled-components'
 const StyledNav = styled('nav')`
     display: flex;
     flex-direction: row;
-    gap: 10px;
-    background-color: #000;
-    gap: 25px;
-    text-align: center;
-    text-transform: uppercase;
-    font-size: 12px;	
+    justify-content: space-between;
+    gap: 20px; 
+    font-family: Montserrat;
 `
 
 const StyledUl = styled('ul')`
     display: flex;
     flex-direction: row;
-    justify content: space-between;
+    gap: 20px;
+    padding-top: 28px;
     padding-left: 0;
-    text-align: right;
+    padding-right: 2%;
+    font-size: 11px;
+    font-weight: 500;
 `
 
 const StyledLink = styled(Link)`
     color: rgba(255, 96, 96, 1);
+    text-transform: uppercase;
     text-decoration: none;
-    font-size: 18px;
     &:hover {
-        cursor: pointer;
-        text-decoration: underline;
-      }
+        pointer: cursor;
+        text-decoration: underlined;
+    }
 `
 
 const StyledLi = styled('li')`
-    margin: 15px;
     list-style-type: none;
 `
 const StyledImg = styled('img')`
-    width: 145px;
+    width: auto;
     height: 46px;
-    padding-left: 20px;
+    padding-left: 2%;
     padding-top: 20px;
 `
 
