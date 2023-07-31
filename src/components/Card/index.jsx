@@ -16,13 +16,17 @@ const CardWrapper = styled('div')`
   display: flex;
   flex-direction: column;
   padding: 15px;
-  background-color: rgba(246, 246, 246, 1);
   color: white;
+  background-color: #fff;
   border-radius: 10px;
   min-width: 300px;
   widht: 80%;
   &:hover {
     cursor: pointer;
+  }
+
+  @media (min-width: 768px) {
+    background-color: rgba(246, 246, 246, 1);
   }
 `
 
