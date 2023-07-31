@@ -17,7 +17,7 @@ const CardWrapper = styled('div')`
   display: flex;
   flex-direction: column;
   padding: 15px;
-  background-color: lightblue ;
+  background-color: rgba(246, 246, 246, 1);
   color: white;
   border-radius: 10px;
   min-width: 300px;
