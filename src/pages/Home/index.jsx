@@ -1,9 +1,10 @@
 import Accommodations from '../../components/Accommodations'
+import Banner from '../../components/Banner'
 
 function Home() {
   return (
       <div>
-          {/* <link to="/banner"></link> */}
+          <Banner />
           <Accommodations />
       </div> 
   )
