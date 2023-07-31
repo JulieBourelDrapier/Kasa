@@ -8,7 +8,7 @@ function accommodations() {
         <Card 
         key={`${accommodation.id}`}
         label={accommodation.title}
-        title={accommodation.description}
+        cover={accommodation.cover}
         />
         ))}
       </div>
