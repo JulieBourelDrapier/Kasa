@@ -3,36 +3,35 @@ import styled from 'styled-components'
 // import DefaultPicture from '../assets/faussephoto.jpg'
 
 
-const CardLabel = styled.span`
-color: #5843e4;
+const CardLabel = styled('span')`
+color: #fff;
 font-size: 22px;
 font-weight: bold;
 ` 
-const CardImage = styled.img`
-width: 80px;
-height: 80px;
-border-radius: 50%;
+const CardImage = styled('img')`
+width: 335px;
+height: 255px;
+border-radius: 10px;
 `
-const CardWrapper = styled.div`
+const CardWrapper = styled('div')`
   display: flex;
   flex-direction: column;
   padding: 15px;
-  background-color: #ff6060 ;
+  background-color: lightblue ;
   color: white;
   border-radius: 10px;
   min-width: 300px;
   widht: 80%;
-  transition: 200ms;
   &:hover {
     cursor: pointer;
   }
 `
 
-function Card({label, title, picture}) {
+function Card({label, title, cover}) {
   return (
     <CardWrapper>
       <CardLabel>{label}</CardLabel>
-      <CardImage src={picture} alt="logement en question" />
+      <CardImage src={cover} alt=" photo du logement en question" />
         <span>{title}</span>
     </CardWrapper>
 )
@@ -41,12 +40,12 @@ function Card({label, title, picture}) {
 Card.propTypes = {
   label: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
-  picture: PropTypes.string.isRequired
+  cover: PropTypes.string.isRequired
 }
 
 Card.defaultProps = {
   label:'',
   title:'',
-  picture: '',
+  cover:'',
 }
 export default Card;

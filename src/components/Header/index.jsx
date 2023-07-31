@@ -1,9 +1,21 @@
 import { Link } from 'react-router-dom';
-import logo from '../../assets/logo.png'
+import logo from '../../assets/petitLogo.png'
 import styled from 'styled-components'
 
+const StyledNav = styled('nav')`
+    display: flex;
+    flex-direction: row;
+    gap: 25px;
+    text-align: center;
+`
+
+const StyledUl = styled('ul')`
+    display: flex;
+    flex-direction: row;
+`
+
 const StyledLink = styled(Link)`
-    color: #8186a0;
+    color: rgba(255, 96, 96, 1);
     text-decoration: none;
     font-size: 18px;
     &:hover {
@@ -14,17 +26,24 @@ const StyledLink = styled(Link)`
 
 const StyledLi = styled('li')`
     margin: 15px;
+    list-style-type: none;
+`
+const StyledImg = styled('img')`
+    width: 145px;
+    height: 46px;
+    padding-left: 20px;
+    padding-top: 20px;
 `
 
 function Header() {
     return (
-        <nav>
-            <img src={logo} alt="Logo du site Kasa" />
-            <ul>
+        <StyledNav>
+            <StyledImg src={logo} alt="Logo du site Kasa" />
+            <StyledUl>
                 <StyledLi><StyledLink to="/">Accueil</StyledLink></StyledLi>
                 <StyledLi><StyledLink to="/about">À propos</StyledLink></StyledLi>
-            </ul>
-        </nav>
+            </StyledUl>
+        </StyledNav>
     );
 }
 

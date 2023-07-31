@@ -6,7 +6,7 @@ import About from './pages/About/About'
 import Header from './components/Header'
 import Error from './components/Error'
 import Banner from './components/Banner'
-import Card from './components/Card'
+// import Card from './components/Card'
 import Footer from './components/Footer'
 
 ReactDOM.render(
