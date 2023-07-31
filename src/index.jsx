@@ -4,9 +4,9 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import Home from './pages/Home'
 import About from './pages/About/About'
 import Header from './components/Header'
-import Error from './components/Error'
+import Error from './pages/Error'
 import Banner from './components/Banner'
-// import Card from './components/Card'
+import Card from './components/Card'
 import Footer from './components/Footer'
 
 ReactDOM.render(
@@ -17,6 +17,7 @@ ReactDOM.render(
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/banner" element={<Banner />} />
+        <Route path= "/card" element={<Card />} />
         <Route path='*' element={<Error />} />
       </Routes>
       <Footer />

@@ -1,6 +1,5 @@
 import { PropTypes } from 'prop-types'
 import styled from 'styled-components'
-// import DefaultPicture from '../assets/faussephoto.jpg'
 
 
 const CardLabel = styled('span')`
