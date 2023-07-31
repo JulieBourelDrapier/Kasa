@@ -5,7 +5,7 @@ import imageBanner from '../../assets/imagebanner.png';
 const BannerWrapper = styled.div`
   text-align: center;
   margin-top: 50px;
-  margin-bottom: 42px;
+  margin-bottom: 20px;
 `;
 
 const BannerImage = styled.img`

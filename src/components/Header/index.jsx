@@ -5,13 +5,20 @@ import styled from 'styled-components'
 const StyledNav = styled('nav')`
     display: flex;
     flex-direction: row;
+    gap: 10px;
+    background-color: #000;
     gap: 25px;
     text-align: center;
+    text-transform: uppercase;
+    font-size: 12px;	
 `
 
 const StyledUl = styled('ul')`
     display: flex;
     flex-direction: row;
+    justify content: space-between;
+    padding-left: 0;
+    text-align: right;
 `
 
 const StyledLink = styled(Link)`
