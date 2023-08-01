@@ -2,40 +2,38 @@ import React from 'react';
 import styled from 'styled-components';
 import imageBanner from '../../assets/imagebanner.png';
 
-const BannerWrapper = styled.div`
-  text-align: center;
-  margin-top: 50px;
+const BannerWrapper = styled.figure`
+  margin: 0;
+  margin-top: 27px;
   margin-bottom: 20px;
+  position: relative;
 `;
 
 const BannerImage = styled.img`
-  width: 95%;
   max-height: 111px;
-  border-radius: 10px;
   object-fit: cover;
-  background-position: center;
+  width: 100%;
+  border-radius: 10px;
 `;
 
-const BannerText = styled.p`
+const BannerText = styled.figcaption`
+  border-radius: 10px;
+  position: absolute;
+  top: 0;
+  padding: 26px;
+  background-color: rgba(0, 0, 0, 0.1);
   font-size: 24px;
   font-weight: 500;
   font-family: Montserrat;
   color: #fff;
-  position: absolute;
-  top: -50%;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  }
 `;
 
 function Banner() {
   return (
-    <BannerWrapper id="banner">
+    <BannerWrapper>
       <BannerImage src={imageBanner} alt="Paysage de fond" />
-      <BannerText>Chez vous, partout et ailleurs.</BannerText>
+        <BannerText>Chez vous, partout et ailleurs.</BannerText>
     </BannerWrapper>
   );
 }
