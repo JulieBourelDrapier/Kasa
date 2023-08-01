@@ -1,4 +1,5 @@
 import logo from '../../assets/logoFooter.png'
+import styled from 'styled-components';
 
 function Footer() {
   return (

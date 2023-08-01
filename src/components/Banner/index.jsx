@@ -5,7 +5,6 @@ import imageBanner from '../../assets/imagebanner.png';
 const BannerWrapper = styled.figure`
   margin: 0;
   margin-top: 27px;
-  margin-bottom: 20px;
   position: relative;
 `;
 

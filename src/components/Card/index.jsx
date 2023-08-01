@@ -1,26 +1,15 @@
 import { PropTypes } from 'prop-types'
 import styled from 'styled-components'
 
-
-const CardLabel = styled('span')`
-color: #fff;
-font-size: 22px;
-font-weight: bold;
-` 
-const CardImage = styled('img')`
-width: 335px;
-height: 255px;
-border-radius: 10px;
-`
-const CardWrapper = styled('div')`
+const CardWrapper = styled('card')`
+  margin-top: 27px;
   display: flex;
   flex-direction: column;
-  padding: 15px;
-  color: white;
+  position: relative;
   background-color: #fff;
-  border-radius: 10px;
   min-width: 300px;
   widht: 80%;
+  margin-bottom: 20px;
   &:hover {
     cursor: pointer;
   }
@@ -30,12 +19,34 @@ const CardWrapper = styled('div')`
   }
 `
 
+const CardImage = styled('img')`
+width: auto;
+height: 255px;
+border-radius: 10px;
+object-fit: cover;
+`
+
+const CardLabel = styled('figcaption')`
+font-family: Montserrat;
+color: #fff;
+font-size: 18px;
+font-weight: 500;
+position: absolute;
+border-radius: 10px;
+top: 210px;
+text-align: left;	
+width: 96%;
+padding-left: 15px;
+background-color: rgba(0, 0, 0, 0.4);
+` 
+
+
 function Card({label, title, cover}) {
   return (
     <CardWrapper>
       <CardLabel>{label}</CardLabel>
       <CardImage src={cover} alt=" photo du logement en question" />
-        <span>{title}</span>
+        <figcaption>{title}</figcaption>
     </CardWrapper>
 )
 }
