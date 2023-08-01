@@ -25,7 +25,6 @@ const BannerText = styled.figcaption`
   font-weight: 500;
   font-family: Montserrat;
   color: #fff;
-  }
 `;
 
 function Banner() {
