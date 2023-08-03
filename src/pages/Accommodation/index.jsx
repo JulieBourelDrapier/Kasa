@@ -1,18 +1,23 @@
-import Card from "../../components/Card";
+import { useParams } from 'react-router-dom';
 import accommodationInfo from '../../data/logements.json';
+import Gallery from '../../components/Gallery'
 
-function accommodations() {
+function Accommodation(props) {
+  const { accommodationId } = useParams();
+  const accommodation = accommodationInfo.find((a) => a.id === accommodationId);
+  console.log(accommodationInfo)
+
   return (
       <section>
-        {accommodationInfo.map((accommodation, index) => (
-        <Card 
-        key={`${accommodation.id}`}
-        label={accommodation.title}
-        cover={accommodation.cover}
-        />
-        ))}
+        <p>accommodation</p>
+        {console.log(accommodation)}
+        <Gallery imgSrc={accommodation.cover} title={accommodation.title}/>
+        <p>{accommodation.title}</p>
+        {accommodation.tags.map((t) => 
+          <p>{t}</p>
+          )}
       </section>
   )
 }
 
-export default accommodations
+export default Accommodation

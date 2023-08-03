@@ -6,9 +6,9 @@ import About from './pages/About/About'
 import Header from './components/Header'
 import Error from './pages/Error'
 import Banner from './components/Banner'
-// import Card from './components/Card'
 import Footer from './components/Footer'
 import CollapseAbout from './components/Collapse'
+import Accommodation from './pages/Accommodation'
 
 ReactDOM.render(
   <React.StrictMode>
@@ -18,8 +18,8 @@ ReactDOM.render(
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/banner" element={<Banner />} />
-        {/* <Route path= "/card" element={<Card />} /> */}
         <Route path="/collapse" element={<CollapseAbout />} />
+        <Route path="/accommodation/:accommodationId" element={<Accommodation />} />
         <Route path='*' element={<Error />} />
       </Routes>
       <Footer />

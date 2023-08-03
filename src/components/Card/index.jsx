@@ -50,7 +50,7 @@ background-color: rgba(0, 0, 0, 0.4);
 ` 
 
 
-function Card({label, title, cover}) {
+function Card({id, label, title, cover}) {
   return (
     <CardContainer>
       <CardWrapper>

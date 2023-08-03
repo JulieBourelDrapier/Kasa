@@ -1,6 +1,7 @@
-import imageApropos from '../../assets/imageabout.png'  
-import Styled from 'styled-components'
-import Collapse from '../../components/Collapse'
+import Banner from '../../components/Banner';
+import Styled from 'styled-components';
+import Collapse from '../../components/Collapse';
+import bannerImg from '../../assets/imageabout.png';
 
 const AboutContainer = Styled.section`
   display: flex;
@@ -25,7 +26,7 @@ function About() {
 
   return (
       <AboutContainer>
-          <ImgAbout src={imageApropos} alt="Paysage de fond" />
+          <Banner image={bannerImg} />
           <Collapse />
       </AboutContainer>
   )

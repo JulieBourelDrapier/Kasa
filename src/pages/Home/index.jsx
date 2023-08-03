@@ -1,12 +1,13 @@
-import Accommodation from '../../pages/Accommodation'
+import ListCards from '../../components/ListCards'
 import Banner from '../../components/Banner'
+import bannerImg from '../../assets/imagebanner.png'
 
 function Home() {
   return (
-      <div>
-          <Banner />
-          <Accommodation />
-      </div> 
+      <section>
+          <Banner image={bannerImg} />
+          <ListCards />
+      </section> 
   )
 }
 

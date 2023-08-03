@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import imageBanner from '../../assets/imagebanner.png';
 
 const FigureContainer = styled.div`
 `
@@ -74,11 +73,11 @@ const BannerOverlay = styled.div`
   background-color: rgba(0, 0, 0, 0.3);
   `
 
-function Banner() {
+function Banner(props) {
   return (
     <FigureContainer>
       <Figure>
-        <BannerImage src={imageBanner} alt="Paysage de fond" />
+        <BannerImage src={props.image} alt="Paysage de fond" />
         <BannerText>Chez vous, partout et ailleurs.</BannerText>
       </Figure>
       <BannerOverlay />
