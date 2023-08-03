@@ -12,22 +12,29 @@ const StyledNav = styled('nav')`
 
 const StyledUl = styled('ul')`
     display: flex;
-    flex-direction: row;
     gap: 20px;
     padding-top: 28px;
     padding-left: 0;
     padding-right: 2%;
-    font-size: 11px;
-    font-weight: 500;
+    font-size: 12px;
 `
 
 const StyledLink = styled(Link)`
     color: rgba(255, 96, 96, 1);
     text-transform: uppercase;
     text-decoration: none;
-    &:hover {
-        pointer: cursor;
-        text-decoration: underlined;
+    &:hover, 
+    &:focus {
+        cursor: pointer;
+        text-decoration: underline;
+    }
+    &:active {
+         text-decoration: underline;
+    }
+   
+
+    @media (min-width: 768px) {
+        text-transform: none;
     }
 `
 
