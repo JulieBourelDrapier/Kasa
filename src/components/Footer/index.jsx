@@ -4,26 +4,35 @@ import desktopImg from '../../assets/biglogofooter.png'
 import desktopText from '../../assets/textfooter.png'
 
 
-const FooterWrapper = styled.div`
-  background-color: #fff;
-  width: 100%;
+const FooterWrapper = styled.footer`
+  width: auto;
+  height: 210px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
 `;
 
 const FooterImage = styled.img`
-  fit: cover;
-  border-radius: 40px;
+  object-fit: cover;
+  text-align: center;	
 `;
 
 const BigLogoFooter = styled.div`
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #fff;
-  width: 100%;
+  // background-color: #000;
+  // margin: 0;
 `;
 
 const StyledFooter = styled.div`
+justify-content: center; 
+align-items: center;
+width: 100%;
+background-color: #000;
+margin: 0;
 
   @media (max-width: 767px) {
     ${FooterImage}{
@@ -41,7 +50,9 @@ const StyledFooter = styled.div`
     }
 
      ${BigLogoFooter}{
-      display: block;
+      display: flex;
+      flex-direction: column;
+      gap: 28px;
      }
   }
 `;
