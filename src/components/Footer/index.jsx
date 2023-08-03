@@ -5,11 +5,16 @@ import desktopText from '../../assets/textfooter.png'
 
 
 const FooterWrapper = styled.footer`
+  margin-top: 40px;
   width: auto;
   height: 210px;
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @media (max-width: 767px) {
+    margin-top: 19px;
+  }
 
 `;
 
