@@ -3,28 +3,56 @@ import styled from 'styled-components';
 import imageBanner from '../../assets/imagebanner.png';
 
 const BannerWrapper = styled.figure`
-  margin: 0;
-  margin-top: 27px;
-  position: relative;
+width: 100%;
+margin: 0;
+margin-top: 27px;
+position: relative;
+display: flex;
+
+@media (min-width: 768px) {
+  text-align: center;
+  justify-content: center;
+  margin-bottom: 40px;
+}
 `;
 
 const BannerImage = styled.img`
-  max-height: 111px;
+
+  @media (max-width: 768px) {
+    max-height: 111px;
+  }
+
+  @media (min-width: 768px) {
+    max-height: 223px;
+  }
+ 
   object-fit: cover;
   width: 100%;
   border-radius: 10px;
+
 `;
 
 const BannerText = styled.figcaption`
+  background-color: #000;
+  opacity: 0.5;
+  color: #fff;
+  text-align: center;
   border-radius: 10px;
   position: absolute;
-  top: 0;
-  padding: 26px;
-  background-color: rgba(0, 0, 0, 0.1);
   font-size: 24px;
   font-weight: 500;
   font-family: Montserrat;
-  color: #fff;
+  width: 100%;
+
+  @media (max-width: 768px) {
+    padding-top: 30px;
+    padding-bottom: 52px;
+  }
+
+  @media (min-width: 768px) {
+    padding-top: 111px;
+    padding-bottom: 82px;
+  }
 `;
 
 function Banner() {
