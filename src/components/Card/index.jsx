@@ -1,21 +1,26 @@
 import { PropTypes } from 'prop-types'
 import styled from 'styled-components'
 
-const CardWrapper = styled('card')`
-  margin-top: 27px;
+
+const CardContainer = styled('section')`
   display: flex;
   flex-direction: column;
+
+  @media (min-width: 768px) {
+      background-color: rgba(246, 246, 246, 1);
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      width: 90%;
+`
+
+const CardWrapper = styled('card')`
+  margin-top: 27px;
   position: relative;
-  background-color: #fff;
-  min-width: 300px;
-  widht: 80%;
   margin-bottom: 20px;
   &:hover {
     cursor: pointer;
-  }
-
-  @media (min-width: 768px) {
-    background-color: rgba(246, 246, 246, 1);
   }
 `
 
@@ -38,16 +43,22 @@ text-align: left;
 width: 96%;
 padding-left: 15px;
 background-color: rgba(0, 0, 0, 0.4);
+
+@media (min-width: 768px) {
+  max-width: 300px;
+}
 ` 
 
 
 function Card({label, title, cover}) {
   return (
-    <CardWrapper>
-      <CardLabel>{label}</CardLabel>
-      <CardImage src={cover} alt=" photo du logement en question" />
-        <figcaption>{title}</figcaption>
-    </CardWrapper>
+    <CardContainer>
+      <CardWrapper>
+        <CardLabel>{label}</CardLabel>
+        <CardImage src={cover} alt=" photo du logement en question" />
+          <figcaption>{title}</figcaption>
+      </CardWrapper>
+    </CardContainer>
 )
 }
 

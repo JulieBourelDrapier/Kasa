@@ -13,7 +13,7 @@ const CollapseContainer = styled.article`
   font-family: Montserrat;
 
   @media (min-width: 768px) {
-    width: 80%;
+    width: 70%;
     margin: 0 auto;
     margin-top: 20px;
     margin-bottom: 20px;

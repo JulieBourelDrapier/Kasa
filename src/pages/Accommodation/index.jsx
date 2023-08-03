@@ -3,7 +3,7 @@ import accommodationInfo from '../../data/logements.json';
 
 function accommodations() {
   return (
-      <div>
+      <section>
         {accommodationInfo.map((accommodation, index) => (
         <Card 
         key={`${accommodation.id}`}
@@ -11,7 +11,7 @@ function accommodations() {
         cover={accommodation.cover}
         />
         ))}
-      </div>
+      </section>
   )
 }
 
