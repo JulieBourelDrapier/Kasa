@@ -2,47 +2,41 @@ import { PropTypes } from 'prop-types'
 import styled from 'styled-components'
 
 
-const CardSection = styled('section')`
+const CardContainer = styled('section')`
   display: flex;
   flex-direction: column;
-  align-items: center;
-  width: 100%; 
 
   @media (min-width: 768px) {
       background-color: rgba(246, 246, 246, 1);
-      flex-direction: row; 
-      justify-content: space-around;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
       flex-wrap: wrap;
-    }
+      width: 90%;
 `
 
-const CardDiv = styled('div')`
+const CardWrapper = styled('card')`
   margin-top: 27px;
-  // position: relative;
+  position: relative;
   margin-bottom: 20px;
-  &:hover, 
-  &:focus {
+  &:hover {
     cursor: pointer;
   }
 `
 
-const CardCover = styled('img')`
-  width: 100%;
-  border-radius: 10px;
-  object-fit: cover;
-  max-height: 255px;
-
-  @media (min-width: 768px) {
-    max-height: 340px;
-  }
+const CardImage = styled('img')`
+width: auto;
+height: 255px;
+border-radius: 10px;
+object-fit: cover;
 `
 
-const CardTitle = styled('h3')`
+const CardLabel = styled('figcaption')`
 font-family: Montserrat;
 color: #fff;
 font-size: 18px;
 font-weight: 500;
-// position: absolute;
+position: absolute;
 border-radius: 10px;
 top: 210px;
 text-align: left;	
@@ -54,21 +48,17 @@ background-color: rgba(0, 0, 0, 0.4);
   max-width: 300px;
 }
 ` 
-const CardLink = styled('p')`
-  color : #000;
-  font-size: 14px;
-`
 
 
 function Card({id, label, title, cover}) {
   return (
-    <CardSection>
-        <CardDiv>
-            <CardCover src={cover} alt=" photo du logement en question" />
-            <CardTitle>{title}</CardTitle>  
-            <CardLink>{label}</CardLink>
-        </CardDiv>
-    </CardSection>
+    <CardContainer>
+      <CardWrapper>
+        <CardLabel>{label}</CardLabel>
+        <CardImage src={cover} alt=" photo du logement en question" />
+          <figcaption>{title}</figcaption>
+      </CardWrapper>
+    </CardContainer>
 )
 }
 
