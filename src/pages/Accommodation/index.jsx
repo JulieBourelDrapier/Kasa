@@ -1,21 +1,27 @@
 import { useParams } from 'react-router-dom';
 import accommodationInfo from '../../data/logements.json';
 import Gallery from '../../components/Gallery'
+import StarRating from '../../components/StartRating';
+import Tag from '../../components/Tag';
 
 function Accommodation(props) {
   const { accommodationId } = useParams();
   const accommodation = accommodationInfo.find((a) => a.id === accommodationId);
-  console.log(accommodationInfo)
+  const { tags } = useParams();
+  console.log(tags);
 
   return (
       <section>
-        <p>accommodation</p>
-        {console.log(accommodation)}
         <Gallery imgSrc={accommodation.cover} title={accommodation.title}/>
+        
         <p>{accommodation.title}</p>
-        {accommodation.tags.map((t) => 
-          <p>{t}</p>
+
+        <Tag>
+        {accommodation.tags.map((tag) => 
+          <p>{tags}</p>
           )}
+        </Tag>
+        <StarRating />
       </section>
   )
 }

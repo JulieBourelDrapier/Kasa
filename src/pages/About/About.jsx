@@ -10,18 +10,6 @@ const AboutContainer = Styled.section`
   margin-top: 27px;
 `
 
-const ImgAbout = Styled.img`
-  width: 100%;
-  height: 223px;
-  border-radius: 10px;
-  object-fit: cover;
-  margin-top: 27px;
-
-  @media (min-width: 768px) {
-    width: 80%;
-    margin: 0 auto;
-  }
-`
 function About() {
 
   return (

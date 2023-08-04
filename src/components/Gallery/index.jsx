@@ -32,54 +32,12 @@ const BannerImage = styled.img`
   border-radius: 10px;
 `;
 
-const BannerText = styled.figcaption`
-  // background-color: #000;
-  opacity: 1;
-  color: #fff;
-  font-size: 24px;
-  font-family: Montserrat;
-  font-weight: 500;
-  width: 100%;
-  border-radius: 10px;
-  position: absolute;
-
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-
-  font-weight: bold;
-  padding-left: 16px;
-  //line-height: 1.5;
-
-  
-
-  @media (max-width: 768px) {
-    padding-top: 30px;
-    padding-bottom: 45px;
-  }
-
-  @media (min-width: 768px) {
-    padding-top: 111px;
-    padding-bottom: 82px;
-    text-align: center;
-  }
-`;
-
-const BannerOverlay = styled.div`
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background-color: rgba(0, 0, 0, 0.3);
-  `
-
 function Gallery(props) {
   return (
     <FigureContainer>
       <Figure>
         <BannerImage src={props.imgSrc} alt="Paysage de fond" />
       </Figure>
-      <BannerOverlay />
     </FigureContainer>
   );
 }

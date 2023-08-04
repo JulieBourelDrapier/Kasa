@@ -9,6 +9,8 @@ import Banner from './components/Banner'
 import Footer from './components/Footer'
 import CollapseAbout from './components/Collapse'
 import Accommodation from './pages/Accommodation'
+import StarRating from './components/StartRating'
+import Tag from './components/Tag'
 
 ReactDOM.render(
   <React.StrictMode>
@@ -20,6 +22,8 @@ ReactDOM.render(
         <Route path="/banner" element={<Banner />} />
         <Route path="/collapse" element={<CollapseAbout />} />
         <Route path="/accommodation/:accommodationId" element={<Accommodation />} />
+        <Route path="/star-rating" element={<StarRating />} />
+        <Route path="/tag" element={<Tag />} />
         <Route path='*' element={<Error />} />
       </Routes>
       <Footer />
