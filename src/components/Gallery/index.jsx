@@ -78,7 +78,6 @@ function Gallery(props) {
     <FigureContainer>
       <Figure>
         <BannerImage src={props.imgSrc} alt="Paysage de fond" />
-        <BannerText>{props.title}</BannerText>
       </Figure>
       <BannerOverlay />
     </FigureContainer>
