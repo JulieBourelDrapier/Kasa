@@ -18,9 +18,10 @@ const CardSection = styled('section')`
 
 const CardDiv = styled('div')`
   margin-top: 27px;
-  position: relative;
+  // position: relative;
   margin-bottom: 20px;
-  &:hover {
+  &:hover, 
+  &:focus {
     cursor: pointer;
   }
 `
@@ -37,25 +38,25 @@ const CardCover = styled('img')`
 `
 
 const CardTitle = styled('h3')`
-// font-family: Montserrat;
-// color: #fff;
-// font-size: 18px;
-// font-weight: 500;
+font-family: Montserrat;
+color: #fff;
+font-size: 18px;
+font-weight: 500;
 // position: absolute;
-// border-radius: 10px;
-// top: 210px;
-// text-align: left;	
-// width: 96%;
-// padding-left: 15px;
-// background-color: rgba(0, 0, 0, 0.4);
+border-radius: 10px;
+top: 210px;
+text-align: left;	
+width: 96%;
+padding-left: 15px;
+background-color: rgba(0, 0, 0, 0.4);
 
-// @media (min-width: 768px) {
-//   max-width: 300px;
-// }
+@media (min-width: 768px) {
+  max-width: 300px;
+}
 ` 
-const CardLabel = styled('p')`
-  color : #fff;
-  font-size: 44px;
+const CardLink = styled('p')`
+  color : #000;
+  font-size: 14px;
 `
 
 
@@ -65,7 +66,7 @@ function Card({id, label, title, cover}) {
         <CardDiv>
             <CardCover src={cover} alt=" photo du logement en question" />
             <CardTitle>{title}</CardTitle>  
-            <CardLabel>{label}</CardLabel>
+            <CardLink>{label}</CardLink>
         </CardDiv>
     </CardSection>
 )
