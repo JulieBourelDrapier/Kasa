@@ -19,10 +19,10 @@ const TagItem = Styled.p`
   color: #fff;	
   `
 
-function Tag(){
+function Tag({name}){
   return (
       <TagContainer>
-          <TagItem>{Tag}</TagItem>
+          <TagItem>{name}</TagItem>
       </TagContainer>
   )
 }
