@@ -5,7 +5,7 @@ import bannerImg from '../../assets/imagebanner.png'
 function Home() {
   return (
       <section>
-          <Banner image={bannerImg} />
+          <Banner image={bannerImg} title="Chez vous, partout et ailleurs."	/>
           <ListCards />
       </section> 
   )

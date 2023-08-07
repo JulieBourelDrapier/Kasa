@@ -78,7 +78,7 @@ function Banner(props) {
     <FigureContainer>
       <Figure>
         <BannerImage src={props.image} alt="Paysage de fond" />
-        <BannerText>Chez vous, partout et ailleurs.</BannerText>
+        <BannerText>{props.title}</BannerText>
       </Figure>
       <BannerOverlay />
     </FigureContainer>

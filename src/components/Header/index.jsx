@@ -17,6 +17,10 @@ const StyledUl = styled('ul')`
     padding-left: 0;
     padding-right: 2%;
     font-size: 12px;
+
+    @media (min-width: 768px) {
+        font-size: 24px;
+    }
 `
 
 const StyledLink = styled(Link)`
