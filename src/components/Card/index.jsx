@@ -2,21 +2,15 @@ import { PropTypes } from 'prop-types'
 import styled from 'styled-components'
 
 
-const CardContainer = styled('article')`
+const CardContainer = styled('main')`
+`
+
+const CardWrapper = styled('article')`
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   width: 100%;
-
-  @media (min-width: 768px) {
-    background-color: rgba(246, 246, 246, 1);
-    flex-direction: row;
-    justify-content: space-around;
-    flex-wrap: wrap;
-  }
-`
-
-const CardWrapper = styled('div')`
   margin-top: 27px;
   position: relative;
   margin-bottom: 20px;
@@ -24,19 +18,25 @@ const CardWrapper = styled('div')`
   &:focus {
     cursor: pointer;
   }
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+    gap: 4%; 
+    padding-left: 4%;
+    padding-right: 4%;
+    background-color: rgba(246, 246, 246, 1);
+    justify-content: space-around;
+    flex-wrap: wrap;
+
+  }
 `
 
-const CardCover = styled('img')`
-width: 100%;
-border-radius: 10px;
-object-fit: cover;
-
-@media (min-width: 768px) {
-  max-height: 340px;
-}
+const CardFigure = styled('figure')`
+display: flex;
+flex-direction: column;
 `
 
-const CardLabel = styled('figcaption')`
+const CardLabel = styled('h3')`
   font-family: Montserrat;
   color: #fff;
   font-size: 18px;
@@ -44,7 +44,7 @@ const CardLabel = styled('figcaption')`
   position: absolute;
   top: 210px;
   text-align: left;	
-  width: 96%;
+  min-width: 96%;
   padding-left: 15px;
   background-color: rgba(0, 0, 0, 0.4);
 
@@ -53,14 +53,28 @@ const CardLabel = styled('figcaption')`
   }
 ` 
 
+const CardCover = styled('img')`
+width: 100%;
+border-radius: 10px;
+object-fit: cover;
+
+@media (min-width: 768px) {
+  height: 340px;
+}
+`
+const CardFigcaption = styled('figcaption')`
+`
+
 
 function Card({id, label, title, cover}) {
   return (
     <CardContainer>
       <CardWrapper>
-        <CardLabel>{label}</CardLabel>
-        <CardCover src={cover} alt=" photo du logement en question" />
-          <figcaption>{title}</figcaption>
+         <CardFigure>
+          <CardLabel>{label}</CardLabel>
+          <CardCover src={cover} alt=" photo du logement en question" />
+          <CardFigcaption>{title}</CardFigcaption>
+        </CardFigure>
       </CardWrapper>
     </CardContainer>
 )
