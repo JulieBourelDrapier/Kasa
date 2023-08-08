@@ -18,7 +18,9 @@ display: flex;
 `;
 
 const BannerImage = styled.img`
-
+  object-fit: cover;
+  width: 100%;
+  border-radius: 10px;
   @media (max-width: 768px) {
     max-height: 111px;
   }
@@ -26,14 +28,9 @@ const BannerImage = styled.img`
   @media (min-width: 768px) {
     max-height: 223px;
   }
- 
-  object-fit: cover;
-  width: 100%;
-  border-radius: 10px;
 `;
 
 const BannerText = styled.figcaption`
-  // background-color: #000;
   opacity: 1;
   color: #fff;
   font-size: 24px;
@@ -42,16 +39,11 @@ const BannerText = styled.figcaption`
   width: 100%;
   border-radius: 10px;
   position: absolute;
-
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-
   font-weight: bold;
   padding-left: 16px;
-  //line-height: 1.5;
-
-  
 
   @media (max-width: 768px) {
     padding-top: 30px;

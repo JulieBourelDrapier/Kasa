@@ -15,7 +15,6 @@ const FooterWrapper = styled.footer`
   @media (max-width: 767px) {
     margin-top: 19px;
   }
-
 `;
 
 const FooterImage = styled.img`
@@ -28,16 +27,14 @@ const BigLogoFooter = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  // background-color: #000;
-  // margin: 0;
 `;
 
 const StyledFooter = styled.div`
-justify-content: center; 
-align-items: center;
-width: 100%;
-background-color: #000;
-margin: 0;
+  justify-content: center; 
+  align-items: center;
+  width: 100%;
+  background-color: #000;
+  margin: 0;
 
   @media (max-width: 767px) {
     ${FooterImage}{

@@ -1,9 +1,7 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
-// import BigOpenArrow from '../../assets/largearrowtoopen.png';
 import SmallOpenArrow from '../../assets/smallarrowtoopen.png';
 import SmallCloseArrow from '../../assets/smallarrowtoclose.png';
-// import BigOpenArrow from '../../assets/bigarrowtoopen.png';
 
 const CollapseContainer = styled.article`
   display: flex;
@@ -68,7 +66,6 @@ const CollapseContent = styled.p`
     font-size: 18px;
   }
 `
-
 
 function Collapse({ title, content }) {
   const [expanded, setExpanded] = useState(false);

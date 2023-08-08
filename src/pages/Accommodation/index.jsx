@@ -1,7 +1,7 @@
 import { useParams } from 'react-router-dom';
 import accommodationInfo from '../../data/logements.json';
 import Gallery from '../../components/Gallery'
-import StarRating from '../../components/StartRating';
+import StarRating from '../../components/StarRating';
 import Tag from '../../components/Tag';
 import Collapse from '../../components/Collapse';
 
