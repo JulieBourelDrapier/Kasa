@@ -1,41 +1,13 @@
 import { PropTypes } from 'prop-types'
-import styled from 'styled-components'
-
-
-const CardContainer = styled('article')`
-
-@media (min-width: 768px) {
-  background-color: rgba(246, 246, 246, 1); 
-}
-`
-
-const CardLabel = styled('h4')`
-` 
+import styled from 'styled-components' 
 
 const CardFigure = styled('figure')`
-// display: flex;
-// flex-direction: column;
-// align-items: center;
-// justify-content: center;
-// width: 100%;
-// margin-top: 27px;
+margin: 0;
 position: relative;
-margin-bottom: 20px;
 &:hover
 &:focus {
   cursor: pointer;
 }
-
-@media (min-width: 768px) {
-  flex-direction: row;
-  gap: 4%; 
-  padding-left: 4%;
-  padding-right: 4%;
-  justify-content: space-around;
-  flex-wrap: wrap;
-
-}
-
 `
 
 
@@ -51,10 +23,12 @@ object-fit: cover;
 const CardFigcaption = styled('figcaption')`
 font-family: Montserrat;
 color: #fff;
-font-size: 18px;
+font-size: 16px;
 font-weight: 500;
 position: absolute;
-// top: 210px;
+bottom: 5px;
+// border-radius: 10px;
+// widht: 100%;
 text-align: left;	
 // min-width: 96%;
 padding-left: 15px;
@@ -67,13 +41,10 @@ background-color: rgba(0, 0, 0, 0.4);
 
 function Card({id, label, title, cover}) {
   return (
-    <CardContainer>
-      <CardLabel>{title}</CardLabel>
          <CardFigure>
-          <CardFigcaption>{label}</CardFigcaption>
           <CardCover src={cover} alt=" photo du logement en question" />
-        </CardFigure>  
-    </CardContainer>
+          <CardFigcaption>{label}</CardFigcaption>
+        </CardFigure> 
 )
 }
 

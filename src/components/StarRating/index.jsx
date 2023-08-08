@@ -4,14 +4,8 @@ const Button = Styled.button`
   background-color: transparent;
   border: none;
   outline: none;
-  cursor: pointer;
-}
-&.on {
-  color: #000;
-}
-&.off {
-  color: #ccc;
-}
+  color : rgba(255, 96, 96, 1);
+  height: 18px; 
 `;
 
 function StarRating({rating}) {
