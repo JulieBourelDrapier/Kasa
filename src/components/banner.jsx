@@ -4,7 +4,6 @@ import styled from 'styled-components';
 
 const BannerContainer = styled.section`
 width: 100%;
-margin: 0;
 margin-top: 27px;
 position: relative;
 display: flex;
@@ -17,7 +16,6 @@ display: flex;
 `;
 
 const BannerImage = styled.img`
-  object-fit: cover;
   width: 100%;
   border-radius: 10px;
   filter: brightness(70%);
@@ -37,8 +35,6 @@ const BannerImage = styled.img`
 const BannerTitle = styled.h1`
   color: #fff;
   font-size: 20px;
-  font-family: Montserrat;
-  font-weight: 500;
   padding-left: 50px;
   width: 62%;
   position: absolute;

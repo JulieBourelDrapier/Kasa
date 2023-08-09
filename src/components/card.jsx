@@ -20,7 +20,6 @@ object-fit: cover;
 }
 `
 const CardFigcaption = styled('figcaption')`
-font-family: Montserrat;
 color: #fff;
 font-size: 16px;
 position: absolute;

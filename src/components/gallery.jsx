@@ -6,19 +6,6 @@ import RightArrow from '../assets/right-arrow.png';
 
 const FigureContainer = styled.div`
 `
-// const Figure = styled.figure`
-// width: 100%;
-// margin: 0;
-// margin-top: 27px;
-// position: relative;
-// display: flex;
-
-// @media (min-width: 768px) {
-//   text-align: center;
-//   justify-content: center;
-//   margin-bottom: 40px;
-// }
-// `;
 
 const Slides = styled.img`
 

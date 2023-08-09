@@ -8,7 +8,6 @@ const CollapseContainer = styled.article`
   flex-direction: column;
   margin-top: 20px;
   margin-bottom: 20px;
-  font-family: Montserrat;
 
   @media (min-width: 768px) {
     width: 70%;
@@ -35,7 +34,6 @@ const CollapseTitle = styled.h2`
   color: #fff;
   padding-left: 20px;
   font-size: 13px;
-  font-weight: 500;
   margin: 0;
   padding-top: 6px;
 
@@ -60,7 +58,6 @@ const CollapseContent = styled.p`
   margin: 0;
   padding: 20px;
   font-size: 12px;
-  white-space: pre-wrap;
 
   @media (min-width: 768px) {
     font-size: 18px;

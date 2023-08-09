@@ -4,7 +4,7 @@ import bannerImg from '../../assets/imagebanner.png'
 import styled from 'styled-components'
 
 const Main = styled('main')`
-  margin: 30px;
+  margin: 20px;
 `
 
 function Home() {
