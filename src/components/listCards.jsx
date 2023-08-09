@@ -4,8 +4,6 @@ import { Link } from "react-router-dom";
 import styled from 'styled-components';
 
 const List = styled('ul')`
-  list-style: none;
-  margin: 0;
   padding-left: 0;
   padding-top: 22px;
   display: flex;
@@ -13,7 +11,7 @@ const List = styled('ul')`
   gap: 20px;
 
   @media (min-width: 768px) {
-    padding:  30px;
+    padding: 30px;
     flex-direction: row;
     flex-wrap: wrap;
     gap: 30px;
@@ -29,7 +27,6 @@ const Item = styled('li')`
 @media (min-width: 768px) {
   flex-basis: calc((100% - 30px) / 2);  
 }
-
 
 @media (min-width: 1200px) {
   flex-basis: calc((100% - 60px) / 3);  

@@ -8,6 +8,10 @@ const Hdr = styled('header')`
     justify-content: space-between;
     gap: 20px; 
     margin: 20px;
+
+    @media (min-width: 768px) {
+        margin: 70px;
+    }
 `
 
 const Logo = styled('img')`
@@ -17,7 +21,7 @@ const Logo = styled('img')`
 
 const NavBar = styled('ul')`
     display: flex;
-    gap: 20px;
+    gap: 25px;
     padding-top: 20px;
     font-size: 12px;
 
@@ -33,14 +37,6 @@ const NavBar = styled('ul')`
 const NavLink = styled(Link)`
     color: rgba(255, 96, 96, 1);
     text-transform: uppercase;
-    // &:hover, 
-    // &:focus {
-    //     cursor: pointer;
-    //     text-decoration: underline;
-    // }
-    // &:active {
-    //      text-decoration: underline;
-    // }
    
 
     @media (min-width: 768px) {

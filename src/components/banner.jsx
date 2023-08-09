@@ -18,7 +18,7 @@ display: flex;
 const BannerImage = styled.img`
   width: 100%;
   border-radius: 10px;
-  filter: brightness(70%);
+  filter: brightness(65%);
   max-height: 111px;
 
   @media (min-width: 768px) {
@@ -35,27 +35,20 @@ const BannerImage = styled.img`
 const BannerTitle = styled.h1`
   color: #fff;
   font-size: 20px;
-  padding-left: 50px;
-  width: 62%;
+  padding-left: 16px;
+  padding-top: 20px;
+  width: 57%;
   position: absolute;
-  top: 35%;
-  left: 28%;
-  transform: translate(-50%, -50%);
-
+ 
   @media (min-width: 768px) {
     width: 100%;
+    padding-top: 34px;
     font-size: 30px;
   }
 
   @media (min-width: 1200px) {
     width: 100%;
     font-size: 48px;
-    padding-top: 78px;
-    padding-bottom: 77px;
-    text-align: center;
-    top: 34%;
-    left: 45%;
-    transform: translate(-50%, -50%);
   }
 `;
 

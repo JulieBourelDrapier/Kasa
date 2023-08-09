@@ -15,23 +15,29 @@ width: 100%;
 border-radius: 10px;
 object-fit: cover;
 
-@media (min-width: 768px) {
+@media (min-width: 500px) {
   height: 340px;
 }
 `
 const CardFigcaption = styled('figcaption')`
 color: #fff;
-font-size: 16px;
+font-size: 12px;
 position: absolute;
-bottom: 5px;
-// border-radius: 0 10px;
-width: 96%;
-text-align: left;	
-padding-left: 15px;
-background-color: rgba(0, 0, 0, 0.4);
+bottom: 4px;
+border-radius: 0 10px 0 10px;
+width: 62%;
+padding: 9px;	
+background-color: rgba(0, 0, 0, 0.5);
+box-sizing: border-box;
+
+@media (min-width: 500px) {
+  font-size: 15px;
+  width: 47%;
+  padding: 10px;
+}
 
 @media (min-width: 768px) {
-  width: auto;
+  width: 62%;
 `
 
 
