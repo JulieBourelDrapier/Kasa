@@ -10,7 +10,6 @@ position: relative;
 }
 `
 
-
 const CardCover = styled('img')`
 width: 100%;
 border-radius: 10px;
@@ -24,13 +23,11 @@ const CardFigcaption = styled('figcaption')`
 font-family: Montserrat;
 color: #fff;
 font-size: 16px;
-font-weight: 500;
 position: absolute;
 bottom: 5px;
-// border-radius: 10px;
-// widht: 100%;
+// border-radius: 0 10px;
+width: 96%;
 text-align: left;	
-// min-width: 96%;
 padding-left: 15px;
 background-color: rgba(0, 0, 0, 0.4);
 
