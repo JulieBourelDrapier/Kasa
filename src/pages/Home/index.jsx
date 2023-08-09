@@ -1,5 +1,5 @@
-import ListCards from '../../components/ListCards'
-import Banner from '../../components/Banner'
+import ListCards from '../../components/listCards'
+import Banner from '../../components/banner'
 import bannerImg from '../../assets/imagebanner.png'
 import styled from 'styled-components'
 

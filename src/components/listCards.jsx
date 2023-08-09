@@ -1,5 +1,5 @@
-import Card from "../Card";
-import accommodationInfo from '../../data/logements.json';
+import Card from "./card";
+import accommodationInfo from '../data/logements.json';
 import { Link } from "react-router-dom";
 import styled from 'styled-components';
 
