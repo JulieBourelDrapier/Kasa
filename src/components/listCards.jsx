@@ -8,9 +8,15 @@ const List = styled('ul')`
   margin: 0;
   padding:  30px;
   display: flex;
-  flex-wrap: wrap;
-  gap: 30px;
-  background-color: #F6F6F6;
+  flex-direction: column;
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 30px;
+    background-color: #F6F6F6;
+  }
+ 
 `
 const Item = styled('li')`
   flex-basis: 100%;
