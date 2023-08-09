@@ -1,6 +1,6 @@
-import Banner from '../../components/Banner';
+import Banner from '../../components/banner';
 import Styled from 'styled-components';
-import Collapse from '../../components/Collapse';
+import Collapse from '../../components/collapse';
 import bannerImg from '../../assets/imageabout.png';
 
 const AboutContainer = Styled.section`

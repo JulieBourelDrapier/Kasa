@@ -3,9 +3,9 @@ import ReactDOM from 'react-dom'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import Home from './pages/Home'
 import About from './pages/About/About'
-import Header from './components/Header'
+import Header from './components/header'
 import Error from './pages/Error'
-import Footer from './components/Footer'
+import Footer from './components/footer'
 import Accommodation from './pages/Accommodation'
 ReactDOM.render(
   <React.StrictMode>

@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import logo from '../../assets/petitLogo.png'
+import logo from '../assets/petitLogo.png'
 import styled from 'styled-components'
 
 const StyledNav = styled('nav')`

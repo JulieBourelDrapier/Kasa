@@ -1,9 +1,9 @@
 import { useParams } from 'react-router-dom';
 import accommodationInfo from '../../data/logements.json';
-import Gallery from '../../components/Gallery'
-import StarRating from '../../components/StarRating';
-import Tag from '../../components/Tag';
-import Collapse from '../../components/Collapse';
+import Gallery from '../../components/gallery'
+import StarRating from '../../components/starRating';
+import Tag from '../../components/tag';
+import Collapse from '../../components/collapse';
 
 function Accommodation() {
   const { accommodationId } = useParams();

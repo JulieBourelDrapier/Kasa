@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
-import SmallOpenArrow from '../../assets/smallarrowtoopen.png';
-import SmallCloseArrow from '../../assets/smallarrowtoclose.png';
+import SmallOpenArrow from '../assets/smallarrowtoopen.png';
+import SmallCloseArrow from '../assets/smallarrowtoclose.png';
 
 const CollapseContainer = styled.article`
   display: flex;

@@ -1,7 +1,7 @@
 import styled from 'styled-components';
-import mobileImg from '../../assets/logoFooter.png'
-import desktopImg from '../../assets/biglogofooter.png'
-import desktopText from '../../assets/textfooter.png'
+import mobileImg from '../assets/logoFooter.png'
+import desktopImg from '../assets/biglogofooter.png'
+import desktopText from '../assets/textfooter.png'
 
 
 const FooterWrapper = styled.footer`
