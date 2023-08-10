@@ -1,12 +1,15 @@
 import Styled from "styled-components";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faStar } from '@fortawesome/free-solid-svg-icons';
 
 const Button = Styled.button`
   background-color: transparent;
   border: none;
   outline: none;
-  color : rgba(255, 96, 96, 1);
-  height: 18px; 
+  height: 18px;
+  padding-top: 20px; 
 `;
+
 
 function StarRating({rating}) {
   return (
@@ -19,7 +22,7 @@ function StarRating({rating}) {
             key={index}
             className={index <= (parseInt(rating) || 0) ? "on" : "off"}
           >
-            <span className="star">&#9733;</span>
+            <FontAwesomeIcon icon={faStar} className="star" />
           </Button>
         );
       })}

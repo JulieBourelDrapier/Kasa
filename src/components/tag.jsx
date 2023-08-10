@@ -4,12 +4,15 @@ import Styled from 'styled-components'
 
 const TagItem = Styled.p`
   background-color: rgb(255, 96, 96, 1);
-  display: inline-block;
-  padding-left: 40px;
-  padding-right: 40px;
-  padding-top: 25px;
-  border-radius: 10px;
-  color: #fff;	
+  width: 84px;
+  min-height: 18px;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 10px;	
+  text-align: center;
+  align-items: center; 
+  display: flex;
+  justify-content: center;
   `
 
 function Tag({name}){
