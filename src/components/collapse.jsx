@@ -10,7 +10,7 @@ const CollapseContainer = styled.article`
   margin-bottom: 20px;
 
   @media (min-width: 768px) {
-    width: 70%;
+    width: 80%;
     margin: 0 auto;
     margin-top: 20px;
     margin-bottom: 20px;

@@ -13,6 +13,14 @@ const TagItem = Styled.p`
   align-items: center; 
   display: flex;
   justify-content: center;
+
+  @media (min-width: 768px) {
+    font-size: 14px;
+    min-width: 115px;
+    height: 25px;
+    border-radius: 10px;
+    padding: 5px;
+  }
   `
 
 function Tag({name}){

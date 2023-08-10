@@ -7,7 +7,7 @@ const Button = Styled.button`
   border: none;
   outline: none;
   height: 18px;
-  padding-top: 20px; 
+  padding-top: 20px;
 `;
 
 
