@@ -9,12 +9,16 @@ import Styled from 'styled-components';
 const Section = Styled.section`
   display: flex;  
   flex-direction: column;
-  margin: 70px;
+  margin: 20px;
+  @media (min-width: 768px) {
+    margin: 70px;
+  }
   `
 
 const AccommodationHeader = Styled.header`
   display: flex;
   flex-direction: column;
+  margin-top: 10px;
 
   @media (min-width: 768px) {
     flex-direction: row;
@@ -28,6 +32,10 @@ const AccommodationTitle = Styled.h2`
   margin: 0;
 
   @media (min-width: 768px) {
+    font-size: 24px;
+  }
+
+  @media (min-width: 1200px) {
     font-size: 36px;
   }
 `
@@ -38,14 +46,20 @@ font-size: 14px;
 margin: 0;
 
 @media (min-width: 768px) {
+  font-size: 16px;
+}
+
+@media (min-width: 1200px) {
   font-size: 18px;
 }
 `
 
 const DivTag = Styled.div`
+margin-top: 15px;
 display: flex;
 flex-direction: row;
 gap: 10px;
+flex-wrap: wrap;
 `
 
 const HostDiv = Styled.div`
@@ -54,45 +68,72 @@ const HostDiv = Styled.div`
 
   @media (min-width: 768px) {
     flex-direction: column;
+    margin-top: -27px;
   }
 `
 const DivWho = Styled.div`
 display: flex;
-gap: 10px;
-padding-left: 100px;
+padding-top: 10px;
 order: 1;
 
+@media (min-width: 768px) {
+    justify-content: flex-end;
+}
+
+@media (min-width: 1200px) {
+  gap: 17px;
+  order: 2;
+}
 `
 
 const Avatar = Styled.img`
-border-radius: 50%;
-width: 32px;
-height: 32px;
-padding-top: 13px;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  margin-top: 15px;
+
+  @media (min-width: 768px) {
+    width: 40px;
+    height: 40px;
+  }
+
+@media (min-width: 1200px) {
+  width: 60px;
+  height: 60px; 
+}
 `
 const HostName = Styled.h4`
   color: #FF6060;
   font-size: 12px;
-  width: 40px;
+  width: 55px;
+
+  @media (min-width: 768px) {
+    font-size: 14px;
+  }
+
+  @media (min-width: 1200px) {
+    font-size: 18px;
+    width: 80px;
+  }
 `
 
 const DivStar = Styled.div`
 display: flex;
-order: 2;
+padding-top: 30px;
 
 @media (min-width: 768px) {
+  order: 2;
+}
+@media (min-width: 1200px) {
   order: 3;
-  padding-left: 65px;
 }
 `
 
 const Description = Styled.section`
-
 @media (min-width: 768px) {
-  
-display: flex;
-flex-direction: row;
-gap: 50px;
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
 }
 `
 function Accommodation() {
@@ -101,11 +142,7 @@ function Accommodation() {
 
   return (
       <Section>
-
-        <article>
               <Gallery imgSrc={accommodation.pictures} title={accommodation.title}/>
-        </article>
-
         <AccommodationHeader>
          
           <section>
