@@ -7,41 +7,65 @@ import SmallLeftArrow from '../assets/smallleftarrow.png';
 import SmallRightArrow from '../assets/smallrightarrow.png';
 
 const GalleryDiv = styled.div`
-  position: relative;
+  position: relative;  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 470px;
 `
 
-const Slides = styled.img`
-
-  @media (max-width: 768px) {
-    max-height: 211px;
-  }
-
-  @media (min-width: 768px) {
-    max-height: 423px;
-  }
- 
-  object-fit: cover;
-  width: 100%;
-  border-radius: 10px;
-`;
-
 const LeftArrowSlide = styled.img`
-position: absolute;
-left: 0;
-margin: 15px;
+  position: absolute;
+  left: 0;
+  margin: 15px;
+  cursor: pointer;
 
 @media (min-width: 768px) {
   content: url(${LeftArrow});
 }
 `
 const RightArrowSlide = styled.img`
-position: absolute;
-right: 0;
-margin: 15px;
+  position: absolute;
+  right: 0;
+  margin: 15px;
+  cursor: pointer;
 
 @media (min-width: 768px) {
   content: url(${RightArrow});
 }
+`
+
+const Slides = styled.img`
+  width: 100%;
+  border-radius: 10px;
+  object-position: center;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-position: center;
+  z-index: -1;
+
+  
+  @media (max-width: 768px) {
+    max-height: 211px;
+    border-radius: 25px;
+  }
+
+  @media (min-width: 768px) {
+    max-height: 423px;
+  }
+`;
+const SlideNumber = styled.p`
+  position: absolute;
+  color: #fff;
+  bottom: 10px;
+  padding: 10px;
+
+  @media (min-width: 768px) {
+    font-size: 18px;
+  }
 `
 
 function Gallery({imgSrc}) {
@@ -52,7 +76,7 @@ function Gallery({imgSrc}) {
        <LeftArrowSlide src={SmallLeftArrow} onClick={() => setIndexGallery(indexGallery - 1 >= 0 ? indexGallery - 1 : imgSrc.length - 1 )}/>
        <RightArrowSlide src={SmallRightArrow} onClick={() => setIndexGallery(indexGallery + 1 < imgSrc.length ? indexGallery + 1 : 0 )}/>
        <Slides src={imgSrc[indexGallery]} alt="Photos du logement sélectionné" />
-       <p>{indexGallery + 1}/{imgSrc.length}</p>
+       <SlideNumber>{indexGallery + 1}/{imgSrc.length}</SlideNumber>
     </GalleryDiv>
   );
 }

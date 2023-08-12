@@ -62,9 +62,6 @@ gap: 10px;
 padding-left: 100px;
 order: 1;
 
-@media (min-width: 768px) {
-  order: 2;
-}
 `
 
 const Avatar = Styled.img`
