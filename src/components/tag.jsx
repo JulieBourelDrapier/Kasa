@@ -13,8 +13,14 @@ const TagItem = Styled.p`
   align-items: center; 
   display: flex;
   justify-content: center;
+  margin: 0;
 
   @media (min-width: 768px) {
+    font-size: 12px;
+    padding: 2px;
+  }
+
+  @media (min-width: 1200px) {
     font-size: 14px;
     min-width: 115px;
     height: 25px;

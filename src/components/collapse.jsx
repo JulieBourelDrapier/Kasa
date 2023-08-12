@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import SmallOpenArrow from '../assets/smallarrowtoopen.png';
 import SmallCloseArrow from '../assets/smallarrowtoclose.png';
 
+
 const CollapseContainer = styled.article`
   display: flex;
   flex-direction: column;
@@ -32,19 +33,21 @@ const CollapseHeader = styled.header`
 
 const CollapseTitle = styled.h2`
   color: #fff;
-  padding-left: 20px;
+  padding-left: 10px;
   font-size: 13px;
   margin: 0;
   padding-top: 6px;
 
   @media (min-width: 768px) {
-    font-size: 24px;
+    font-size: 18px;
   }
 `
 const CollapseArrow = styled.img` 
   width: auto;
   height: 23px; 
   padding-top: 4px;
+  transition: transform 0.3s ease;
+  transform: ${props => props.expanded ? 'rotate(0deg)' : 'rotate(360deg)'};
 
   @media (min-width: 768px) {
     padding-right: 10px;
@@ -66,13 +69,12 @@ const CollapseContent = styled.p`
 
 function Collapse({ title, content }) {
   const [expanded, setExpanded] = useState(false);
-
-
   return (
     <CollapseContainer className="collapse">
       <CollapseHeader className="collapse-header" onClick={() => setExpanded(!expanded)}>
         <CollapseTitle>{title}</CollapseTitle>
-        <CollapseArrow src={expanded ? SmallOpenArrow : SmallCloseArrow}></CollapseArrow>
+        <CollapseArrow src={expanded ? SmallOpenArrow : SmallCloseArrow} expanded={expanded} />
+
       </CollapseHeader>
       {expanded && (
         <div className="collapse-content">

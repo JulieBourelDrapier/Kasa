@@ -13,7 +13,11 @@ const GalleryDiv = styled.div`
   justify-content: center;
   align-items: center;
   width: 100%;
-  min-height: 470px;
+  min-height: 250px;
+
+  @media (min-width: 1200px) {
+    min-height: 470px;
+  }
 `
 
 const LeftArrowSlide = styled.img`
@@ -22,7 +26,7 @@ const LeftArrowSlide = styled.img`
   margin: 15px;
   cursor: pointer;
 
-@media (min-width: 768px) {
+@media (min-width: 1200px) {
   content: url(${LeftArrow});
 }
 `
@@ -32,7 +36,7 @@ const RightArrowSlide = styled.img`
   margin: 15px;
   cursor: pointer;
 
-@media (min-width: 768px) {
+@media (min-width: 1200px) {
   content: url(${RightArrow});
 }
 `
@@ -46,24 +50,22 @@ const Slides = styled.img`
   height: 100%;
   object-position: center;
   z-index: -1;
+  filter: brightness(90%);
 
-  
-  @media (max-width: 768px) {
-    max-height: 211px;
+  @media (min-width: 1200px) {
+    min-height: 400px;
     border-radius: 25px;
   }
-
-  @media (min-width: 768px) {
-    max-height: 423px;
-  }
 `;
+
 const SlideNumber = styled.p`
   position: absolute;
   color: #fff;
-  bottom: 10px;
+  bottom: 5px;
   padding: 10px;
+  text-shadow: 1px 1px 1px #000;
 
-  @media (min-width: 768px) {
+  @media (min-width: 1200px) {
     font-size: 18px;
   }
 `
