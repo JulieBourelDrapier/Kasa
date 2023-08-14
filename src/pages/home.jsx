@@ -1,6 +1,6 @@
 import ListCards from '../components/listCards'
 import Banner from '../components/banner'
-import bannerImg from '../../assets/imagebanner.png'
+import bannerImg from '../assets/imagebanner.png'
 import styled from 'styled-components'
 
 const Main = styled('main')`

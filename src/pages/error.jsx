@@ -1,4 +1,4 @@
-import error404 from '../../assets/404.png'
+import error404 from '../assets/404.png'
 import styled from 'styled-components';
 
 const ErrorWrapper = styled.section`
@@ -15,7 +15,6 @@ const ErrorImage = styled.img`
   padding-top: 113px;
   width: auto;
   height: 99px;
-
 `
 
 const ErrorMessage = styled.p`
