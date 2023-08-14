@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
-import SmallOpenArrow from '../assets/smallarrowtoopen.png';
-import SmallCloseArrow from '../assets/smallarrowtoclose.png';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faAngleUp } from '@fortawesome/free-solid-svg-icons';
+
 
 
 const CollapseContainer = styled.article`
@@ -25,6 +26,7 @@ const CollapseHeader = styled.header`
   background-color: #ff6060;
   border-radius: 5px;
   height: 30px;
+  cursor: pointer;
 
   @media (min-width: 768px) {
     padding-bottom: 10px;
@@ -42,17 +44,16 @@ const CollapseTitle = styled.h2`
     font-size: 18px;
   }
 `
-const CollapseArrow = styled.img` 
+const CollapseArrow = styled(FontAwesomeIcon)` 
   width: auto;
   height: 23px; 
-  padding-top: 4px;
-  transition: transform 0.3s ease;
-  transform: ${props => props.expanded ? 'rotate(0deg)' : 'rotate(360deg)'};
+  position: relative;
+  right: 25px;
+  top: 8px;
+  color: #fff;
+  transition: transform 2s ease;
 
-  @media (min-width: 768px) {
-    padding-right: 10px;
-    padding-top: 10px;
-  }
+  
 `
 
 const CollapseContent = styled.p`
@@ -73,12 +74,11 @@ function Collapse({ title, content }) {
     <CollapseContainer className="collapse">
       <CollapseHeader className="collapse-header" onClick={() => setExpanded(!expanded)}>
         <CollapseTitle>{title}</CollapseTitle>
-        <CollapseArrow src={expanded ? SmallOpenArrow : SmallCloseArrow} expanded={expanded} />
-
+        <CollapseArrow src={FontAwesomeIcon} icon={faAngleUp} expanded={expanded} rotation={expanded ? 180 : 0}/>      
       </CollapseHeader>
       {expanded && (
         <div className="collapse-content">
-          <CollapseContent>{content}</CollapseContent>
+          <CollapseContent expanded={expanded}>{content}</CollapseContent>
         </div>
       )}
     </CollapseContainer>
