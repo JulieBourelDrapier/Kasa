@@ -45,15 +45,18 @@ const CollapseTitle = styled.h2`
   }
 `
 const CollapseArrow = styled(FontAwesomeIcon)` 
-  width: auto;
-  height: 23px; 
   position: relative;
-  right: 25px;
-  top: 8px;
+  right: 10px;
+  top: 10px;
   color: #fff;
+  font-size: 12px;
   transition: transform 2s ease;
+  transform: ${props => props.$expanded && props.$expanded === 'true' ? 'rotate(-180deg)' : 'rotate (0deg)'};
 
-  
+  @media (min-width: 768px) {
+    font-size: 20px;
+    right: 20px;
+  }
 `
 
 const CollapseContent = styled.p`
@@ -74,11 +77,11 @@ function Collapse({ title, content }) {
     <CollapseContainer className="collapse">
       <CollapseHeader className="collapse-header" onClick={() => setExpanded(!expanded)}>
         <CollapseTitle>{title}</CollapseTitle>
-        <CollapseArrow src={FontAwesomeIcon} icon={faAngleUp} expanded={expanded} rotation={expanded ? 180 : 0}/>      
+        <CollapseArrow src={FontAwesomeIcon} icon={faAngleUp} $expanded={expanded.toString()} />      
       </CollapseHeader>
       {expanded && (
         <div className="collapse-content">
-          <CollapseContent expanded={expanded}>{content}</CollapseContent>
+          <CollapseContent $expanded={expanded.toString()}>{content}</CollapseContent>
         </div>
       )}
     </CollapseContainer>
