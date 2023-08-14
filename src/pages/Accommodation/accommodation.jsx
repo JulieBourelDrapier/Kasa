@@ -82,6 +82,7 @@ order: 1;
 
 @media (min-width: 1200px) {
   gap: 17px;
+  padding-top: 20px;
   order: 2;
 }
 `
@@ -108,7 +109,8 @@ const HostName = Styled.h4`
   width: 55px;
 
   @media (min-width: 768px) {
-    font-size: 14px;
+    font-size: 13px;
+    width: 56px;
   }
 
   @media (min-width: 1200px) {
@@ -126,6 +128,7 @@ padding-top: 30px;
 }
 @media (min-width: 1200px) {
   order: 3;
+  padding-top: 0;
 }
 `
 

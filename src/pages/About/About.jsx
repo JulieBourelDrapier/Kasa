@@ -7,7 +7,11 @@ const AboutContainer = Styled.section`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin: 70px;
+  margin: 20px;
+
+  @media (min-width: 768px) {
+    margin: 40 70px;
+  }
 `
 
 function About() {

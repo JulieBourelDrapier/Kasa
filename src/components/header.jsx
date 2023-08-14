@@ -10,7 +10,7 @@ const Hdr = styled('header')`
     margin: 20px;
 
     @media (min-width: 768px) {
-        margin: 70px;
+        margin: 38px 92px;
     }
 `
 

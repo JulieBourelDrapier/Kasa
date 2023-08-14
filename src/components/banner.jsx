@@ -3,15 +3,15 @@ import styled from 'styled-components';
 
 
 const BannerContainer = styled.section`
-width: 100%;
-margin-top: 27px;
+// width: 100%;
+// margin-top: 27px;
 position: relative;
 display: flex;
 
 @media (min-width: 768px) {
   text-align: center;
   justify-content: center;
-  margin-bottom: 40px;
+  // margin: 7px 70px;
 }
 `;
 

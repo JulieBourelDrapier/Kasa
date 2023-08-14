@@ -14,8 +14,8 @@ const CollapseContainer = styled.article`
   @media (min-width: 768px) {
     width: 80%;
     margin: 0 auto;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-top: 30px;
+    margin-bottom: 38px;
   }
 `
 
@@ -42,6 +42,8 @@ const CollapseTitle = styled.h2`
 
   @media (min-width: 768px) {
     font-size: 18px;
+    padding-top: 9px;
+    padding-left: 16px;
   }
 `
 const CollapseArrow = styled(FontAwesomeIcon)` 
@@ -50,7 +52,7 @@ const CollapseArrow = styled(FontAwesomeIcon)`
   top: 10px;
   color: #fff;
   font-size: 12px;
-  transition: transform 2s ease;
+  transition: transform 0.5s ease;
   transform: ${props => props.$expanded && props.$expanded === 'true' ? 'rotate(-180deg)' : 'rotate (0deg)'};
 
   @media (min-width: 768px) {
