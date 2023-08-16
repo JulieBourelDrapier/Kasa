@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleUp } from '@fortawesome/free-solid-svg-icons';
@@ -60,10 +60,6 @@ const CollapseArrow = styled(FontAwesomeIcon)`
     right: 20px;
   }
 `
-const ContentContainer = styled.div`
-opacity: 1;
-transition: opacity 0.5s ease;
-`
 
 const CollapseContent = styled.p`
   background-color: rgba(246, 246, 246, 1);
@@ -71,24 +67,34 @@ const CollapseContent = styled.p`
   margin: 0;
   padding: 20px;
   font-size: 12px;
+  transition: opacity 0.5s;
+  opacity: 0;
 
   @media (min-width: 768px) {
     font-size: 18px;
   }
-`
+  `
 
 function Collapse({ title, content }) {
   const [expanded, setExpanded] = useState(false);
+  const [style, setStyle] = useState({ opacity: 0 });
+
+  useEffect(() => {
+        setTimeout(function () {
+          setStyle({ opacity: expanded ? 1 : 0 });
+        }, 1)
+  }, [expanded])
+  
   return (
     <CollapseContainer className="collapse">
-      <CollapseHeader className="collapse-header" onClick={() => setExpanded(!expanded)}>
+      <CollapseHeader className="collapse-header" onClick={() => {setExpanded(!expanded)}}>
         <CollapseTitle>{title}</CollapseTitle>
         <CollapseArrow src={FontAwesomeIcon} icon={faAngleUp} $expanded={expanded.toString()} />      
       </CollapseHeader>
       {expanded && (
-        <ContentContainer>
-          <CollapseContent $expanded={expanded.toString()}>{content}</CollapseContent>
-       </ContentContainer>
+        <div className="collapse-content">
+          <CollapseContent $expanded={expanded.toString()} style={style}>{content}</CollapseContent>
+        </div>
       )}
     </CollapseContainer>
   );
