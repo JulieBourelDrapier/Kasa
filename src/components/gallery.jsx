@@ -75,10 +75,16 @@ function Gallery({imgSrc}) {
 
   return (
     <GalleryDiv>
+      {imgSrc.length > 1 && (
        <LeftArrowSlide src={SmallLeftArrow} onClick={() => setIndexGallery(indexGallery - 1 >= 0 ? indexGallery - 1 : imgSrc.length - 1 )}/>
+       )}
+       {imgSrc.length > 1 && (
        <RightArrowSlide src={SmallRightArrow} onClick={() => setIndexGallery(indexGallery + 1 < imgSrc.length ? indexGallery + 1 : 0 )}/>
+       )}
        <Slides src={imgSrc[indexGallery]} alt="Photos du logement sélectionné" />
+       {imgSrc.length > 1 && (
        <SlideNumber>{indexGallery + 1}/{imgSrc.length}</SlideNumber>
+       )}
     </GalleryDiv>
   );
 }

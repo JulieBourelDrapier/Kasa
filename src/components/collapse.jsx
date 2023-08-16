@@ -67,8 +67,7 @@ const CollapseContent = styled.p`
   margin: 0;
   padding: 20px;
   font-size: 12px;
-  transition: opacity 0.5s;
-  opacity: 0;
+  transition: opacity 1s;
 
   @media (min-width: 768px) {
     font-size: 18px;
@@ -77,7 +76,7 @@ const CollapseContent = styled.p`
 
 function Collapse({ title, content }) {
   const [expanded, setExpanded] = useState(false);
-  const [style, setStyle] = useState({ opacity: 0 });
+  const [style, setStyle] = useState({ opacity: 0.2 });
 
   useEffect(() => {
         setTimeout(function () {
