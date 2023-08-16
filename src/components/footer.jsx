@@ -18,7 +18,6 @@ const FooterImage = styled.img`
 `;
 
 const BigLogoFooter = styled.div`
-  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -27,7 +26,6 @@ const BigLogoFooter = styled.div`
 const StyledFooter = styled.div`
   justify-content: center; 
   align-items: center;
-  width: 100%;
   background-color: #000;
   margin: 0;
 

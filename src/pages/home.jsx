@@ -4,10 +4,10 @@ import bannerImg from '../assets/imagebanner.png'
 import styled from 'styled-components'
 
 const Main = styled('main')`
-  margin: 20px;
+  margin: 20px 20px;
 
   @media (min-width: 768px) {
-    margin: 70px;
+    margin: 27px 70px;
   }
 `
 

@@ -4,20 +4,17 @@ import { Link } from "react-router-dom";
 import styled from 'styled-components';
 
 const List = styled('ul')`
-  padding-left: 0;
-  padding-top: 22px;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 30px;
+  padding-top: 20px;
 
   @media (min-width: 768px) {
-    padding: 30px;
+    padding: 50px;
     flex-direction: row;
     flex-wrap: wrap;
-    gap: 30px;
     background-color: #F6F6F6;
     border-radius: 25px;
-    padding-top: 56px;
   }
  
 `

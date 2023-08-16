@@ -1,8 +1,7 @@
 import { PropTypes } from 'prop-types'
 import styled from 'styled-components' 
 
-const CardFigure = styled('figure')`
-margin: 0;
+const CardFigure = styled('figure')` 
 position: relative;
 &:hover
 &:focus {
@@ -21,23 +20,23 @@ height: 255px;
 `
 const CardFigcaption = styled('figcaption')`
 color: #fff;
-font-size: 12px;
+font-size: 15px;
 position: absolute;
 bottom: 4px;
-border-radius: 0 10px 0 10px;
-width: 62%;
+border-radius: 0 0 10px 10px;
+width: 100%;
 padding: 9px;	
 background-color: rgba(0, 0, 0, 0.5);
 box-sizing: border-box;
-
-@media (min-width: 500px) {
-  font-size: 15px;
-  width: 47%;
-  padding: 10px;
-}
+min-height: 45px;
 
 @media (min-width: 768px) {
-  width: 62%;
+  padding: 4px;
+}
+
+@media (min-width: 1200px) {
+  padding: 5px;
+}
 `
 
 
