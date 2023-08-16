@@ -10,6 +10,7 @@ const CollapseContainer = styled.article`
   flex-direction: column;
   margin-top: 20px;
   margin-bottom: 20px;
+  width: 90%;
 
   @media (min-width: 768px) {
     width: 80%;
@@ -60,6 +61,10 @@ const CollapseArrow = styled(FontAwesomeIcon)`
     right: 20px;
   }
 `
+const ContentContainer = styled.div`
+opacity: 1;
+transition: opacity 0.5s ease;
+`
 
 const CollapseContent = styled.p`
   background-color: rgba(246, 246, 246, 1);
@@ -82,9 +87,9 @@ function Collapse({ title, content }) {
         <CollapseArrow src={FontAwesomeIcon} icon={faAngleUp} $expanded={expanded.toString()} />      
       </CollapseHeader>
       {expanded && (
-        <div className="collapse-content">
+        <ContentContainer>
           <CollapseContent $expanded={expanded.toString()}>{content}</CollapseContent>
-        </div>
+       </ContentContainer>
       )}
     </CollapseContainer>
   );
