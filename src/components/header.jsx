@@ -37,7 +37,6 @@ const NavBar = styled('ul')`
 const NavLink = styled(Link)`
     color: rgba(255, 96, 96, 1);
     text-transform: uppercase;
-   
 
     @media (min-width: 768px) {
         text-transform: none;

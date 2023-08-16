@@ -10,7 +10,6 @@ const CollapseContainer = styled.article`
   flex-direction: column;
   margin-top: 20px;
   margin-bottom: 20px;
-  width: 90%;
 
   @media (min-width: 768px) {
     width: 80%;

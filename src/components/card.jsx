@@ -13,7 +13,7 @@ position: relative;
 const CardCover = styled('img')`
 width: 100%;
 border-radius: 10px;
-object-fit: cover;
+height: 255px;	
 
 @media (min-width: 500px) {
   height: 340px;
