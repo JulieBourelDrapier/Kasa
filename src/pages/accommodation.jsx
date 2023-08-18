@@ -1,5 +1,4 @@
-import { useEffect, useState } from 'react';
-import { useNavigate, useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import accommodationInfo from '../data/logements.json';
 import Gallery from '../components/gallery'
 import StarRating from '../components/starRating';
@@ -146,7 +145,7 @@ function Accommodation() {
   const accommodation = accommodationInfo.find((a) => a.id === accommodationId);
 
   if (!accommodation) return <Error />
-  
+
   return (
     <div>
     { !!accommodation && accommodation.id !== null &&
