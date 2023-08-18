@@ -53,7 +53,6 @@ const CollapseArrow = styled(FontAwesomeIcon)`
   color: #fff;
   font-size: 12px;
   transition: transform 0.5s ease;
-  transform: ${props => props.$expanded && props.$expanded === 'true' ? 'rotate(-180deg)' : 'rotate (0deg)'};
 
   @media (min-width: 768px) {
     font-size: 20px;
@@ -88,7 +87,12 @@ function Collapse({ title, content }) {
     <CollapseContainer className="collapse">
       <CollapseHeader className="collapse-header" onClick={() => {setExpanded(!expanded)}}>
         <CollapseTitle>{title}</CollapseTitle>
-        <CollapseArrow src={FontAwesomeIcon} icon={faAngleUp} $expanded={expanded.toString()} />      
+        <CollapseArrow 
+        src={FontAwesomeIcon} 
+        icon={faAngleUp} 
+        $expanded={expanded.toString()} 
+        style={{ transform: expanded ? 'rotate(-180deg)' : 'rotate(0deg)' }} 
+        />     
       </CollapseHeader>
       {expanded && (
         <div className="collapse-content">
