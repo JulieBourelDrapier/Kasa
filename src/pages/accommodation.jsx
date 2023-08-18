@@ -1,12 +1,10 @@
-import { useParams, useNavigate } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import accommodationInfo from '../data/logements.json';
-import getAccommodation from '../components/card';
 import Gallery from '../components/gallery'
 import StarRating from '../components/starRating';
 import Tag from '../components/tag';
 import Collapse from '../components/collapse';
 import Styled from 'styled-components';
-import { useEffect } from 'react';
 
 const Section = Styled.section`
   display: flex;  
@@ -143,16 +141,7 @@ const Description = Styled.section`
 `
 function Accommodation() {
   const { accommodationId } = useParams();
-  const navigate = useNavigate();
   const accommodation = accommodationInfo.find((a) => a.id === accommodationId);
-
-  useEffect(() => {
-    const fetchedAccommodation = {accommodationId};
-    if (!fetchedAccommodation) {
-      navigate('*');
-    }
-  }, [accommodationId, navigate]);
-
 
   return (
       <Section>
