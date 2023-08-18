@@ -1,10 +1,12 @@
-import { useParams } from 'react-router-dom';
+import { useEffect, useState } from 'react';
+import { useNavigate, useParams } from 'react-router-dom';
 import accommodationInfo from '../data/logements.json';
 import Gallery from '../components/gallery'
 import StarRating from '../components/starRating';
 import Tag from '../components/tag';
 import Collapse from '../components/collapse';
 import Styled from 'styled-components';
+import Error from './error';
 
 const Section = Styled.section`
   display: flex;  
@@ -143,7 +145,11 @@ function Accommodation() {
   const { accommodationId } = useParams();
   const accommodation = accommodationInfo.find((a) => a.id === accommodationId);
 
+  if (!accommodation) return <Error />
+  
   return (
+    <div>
+    { !!accommodation && accommodation.id !== null &&
       <Section>
               <Gallery imgSrc={accommodation.pictures} title={accommodation.title}/>
         <AccommodationHeader>
@@ -177,7 +183,8 @@ function Accommodation() {
           </Description>
 
           </Section>
-  )
+    }
+    </div>)
 }
 
 export default Accommodation
