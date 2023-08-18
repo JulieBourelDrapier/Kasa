@@ -36,10 +36,9 @@ function ListCards() {
   return (
       <List>
         {accommodationInfo.map((accommodation, index) => (
-          <Item>
+          <Item key={accommodation.id}>
             <Link to={`/accommodation/${accommodation.id}`}>
               <Card 
-              key={`${accommodation.id}`}
               id={accommodation.id}
               label={accommodation.title}
               cover={accommodation.cover}

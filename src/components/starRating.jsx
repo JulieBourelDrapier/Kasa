@@ -14,7 +14,10 @@ function StarRating({rating}) {
       {[...Array(5)].map((star, index) => {
         index += 1;
         return (
-          <StyledFontAwesomeIcon  icon={faStar} className={`star ${index <= (parseInt(rating) || 0) ? 'on' : 'off'}`} />
+          <StyledFontAwesomeIcon 
+          key={index} 
+          icon={faStar} 
+          className={`star ${index <= (parseInt(rating) || 0) ? 'on' : 'off'}`} />
         );
       })}
     </div>
