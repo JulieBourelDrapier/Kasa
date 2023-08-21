@@ -77,7 +77,7 @@ const CollapseContent = styled.p`
   background-color: rgba(246, 246, 246, 1);
   color: #ff6060;
   margin: 0;
-  padding: 20px 20px 5px 20px;
+  padding: 3px 22px;
   font-size: 12px;
   transition: opacity 1s;
 
@@ -85,6 +85,7 @@ const CollapseContent = styled.p`
     font-size: 18px;
   }
   `
+ 
 
 function Collapse({ title, content, list= false }) {
   const [expanded, setExpanded] = useState(false);
@@ -115,7 +116,7 @@ function Collapse({ title, content, list= false }) {
         </div>
       )}
       {expanded && !list && (
-        <div className="collapse-content">
+        <div className="collapse-content" >
           <CollapseContent $expanded={expanded.toString()} style={style}>{content}</CollapseContent>
         </div>
       )}
