@@ -1,3 +1,4 @@
+
 import { PropTypes } from 'prop-types'
 import styled from 'styled-components' 
 
@@ -13,38 +14,51 @@ const CardCover = styled('img')`
 width: 100%;
 border-radius: 10px;
 height: 255px;	
+position: relative;
+`
 
-@media (min-width: 500px) {
-  height: 340px;
+const CardDiv = styled('div')`
+position: relative;
+display: inline-block;
+width: 100%;
+
+&::after {
+  content: "";
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 99%;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(255, 255, 255, 0.5) 60%, #ff6060 100%);
+  opacity: 0.6;
+  border-radius: 10px;
 }
 `
+
 const CardFigcaption = styled('figcaption')`
 color: #fff;
 font-size: 15px;
 position: absolute;
 bottom: 4px;
 border-radius: 0 0 10px 10px;
-width: 100%;
-padding: 9px;	
-background-color: rgba(0, 0, 0, 0.5);
+width: 85%;
+padding: 20px;
 box-sizing: border-box;
-min-height: 45px;
-
-@media (min-width: 768px) {
-  padding: 4px;
-}
 
 @media (min-width: 1200px) {
-  padding: 5px;
+  width: 55%;  
 }
+
 `
 
 
 function Card({id, label, title, cover}) {
   return (
          <CardFigure>
-          <CardCover src={cover} alt=" photo du logement en question" />
-          <CardFigcaption>{label}</CardFigcaption>
+          <CardDiv>
+            <CardCover src={cover} alt=" photo du logement en question" />
+          </CardDiv>
+            <CardFigcaption>{label}</CardFigcaption>
         </CardFigure> 
 )
 }

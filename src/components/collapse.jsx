@@ -73,7 +73,21 @@ const CollapseContent = styled.p`
   }
   `
 
-function Collapse({ title, content }) {
+  const CollapseLi = styled.li`
+  background-color: rgba(246, 246, 246, 1);
+  color: #ff6060;
+  margin: 0;
+  padding: 3px 22px;
+  font-size: 12px;
+  transition: opacity 1s;
+
+  @media (min-width: 768px) {
+    font-size: 18px;
+  }
+  `
+ 
+
+function Collapse({ title, content, list= false }) {
   const [expanded, setExpanded] = useState(false);
   const [style, setStyle] = useState({ opacity: 0.2 });
 
@@ -94,8 +108,15 @@ function Collapse({ title, content }) {
         style={{ transform: expanded ? 'rotate(-180deg)' : 'rotate(0deg)' }} 
         />     
       </CollapseHeader>
-      {expanded && (
+      {expanded && list && (
         <div className="collapse-content">
+          <ul>
+            {content.split('\n').map((item, index) => <CollapseLi key={`collapse-li-${index}`} $expanded={expanded.toString()} style={style}>{item}</CollapseLi>)}
+          </ul>
+        </div>
+      )}
+      {expanded && !list && (
+        <div className="collapse-content" >
           <CollapseContent $expanded={expanded.toString()} style={style}>{content}</CollapseContent>
         </div>
       )}

@@ -178,7 +178,7 @@ function Accommodation() {
 
           <Description>
                   <Collapse title="Description" content={accommodation.description} />
-                  <Collapse title="Équipement" content={accommodation.equipments.join('\n')} />
+                  <Collapse title="Équipement" list={true} content={accommodation.equipments.join('\n')} />
           </Description>
 
           </Section>
