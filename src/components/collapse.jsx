@@ -74,16 +74,20 @@ const CollapseContent = styled.p`
   `
 
   const CollapseLi = styled.li`
-  background-color: rgba(246, 246, 246, 1);
+  // background-color: rgba(246, 246, 246, 1);
   color: #ff6060;
   margin: 0;
-  padding: 3px 22px;
+  padding-bottom: 4px;
   font-size: 12px;
   transition: opacity 1s;
 
   @media (min-width: 768px) {
     font-size: 18px;
   }
+  `
+  const CollapseDiv = styled.div`
+  background-color: rgba(246, 246, 246, 1);
+  padding: 20px 20px 16px 20px;
   `
  
 
@@ -109,11 +113,11 @@ function Collapse({ title, content, list= false }) {
         />     
       </CollapseHeader>
       {expanded && list && (
-        <div className="collapse-content">
+        <CollapseDiv className="collapse-content">
           <ul>
             {content.split('\n').map((item, index) => <CollapseLi key={`collapse-li-${index}`} $expanded={expanded.toString()} style={style}>{item}</CollapseLi>)}
           </ul>
-        </div>
+        </CollapseDiv>
       )}
       {expanded && !list && (
         <div className="collapse-content" >
