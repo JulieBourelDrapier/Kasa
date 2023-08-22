@@ -13,8 +13,9 @@ position: relative;
 const CardCover = styled('img')`
 width: 100%;
 border-radius: 10px;
-height: 255px;	
+min-height: 340px;	
 position: relative;
+
 `
 
 const CardDiv = styled('div')`
@@ -29,26 +30,26 @@ width: 100%;
   top: 0;
   left: 0;
   height: 99%;
-  background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(255, 255, 255, 0.5) 60%, #ff6060 100%);
-  opacity: 0.6;
+  background-image: linear-gradient(180deg, rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.6));
+  opacity: 0.7;
   border-radius: 10px;
 }
 `
 
 const CardFigcaption = styled('figcaption')`
 color: #fff;
-font-size: 15px;
+font-size: 18px;
 position: absolute;
 bottom: 4px;
 border-radius: 0 0 10px 10px;
-width: 85%;
-padding: 20px;
+width: 83%;
+padding: 15px;
 box-sizing: border-box;
 
-@media (min-width: 1200px) {
-  width: 55%;  
+@media (min-width: 768px) {
+  width: 100%;
+  font-size: 17px;
 }
-
 `
 
 
